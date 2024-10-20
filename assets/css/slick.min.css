@@ -1,0 +1,175 @@
+/* Slick Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0
+}
+
+.slick-list:focus {
+    outline: 0
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand
+}
+
+.slick-slider .slick-list,
+.slick-slider .slick-track {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.slick-track:after,
+.slick-track:before {
+    display: table;
+    content: ""
+}
+
+.slick-track:after {
+    clear: both
+}
+
+.slick-loading .slick-track {
+    visibility: hidden
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px
+}
+
+[dir=rtl] .slick-slide {
+    float: right
+}
+
+.slick-slide img {
+    display: block
+}
+
+.slick-slide.slick-loading img {
+    display: none
+}
+
+.slick-slide.dragging img {
+    pointer-events: none
+}
+
+.slick-initialized .slick-slide {
+    display: block
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent
+}
+
+.slick-arrow.slick-hidden {
+    display: none
+}
+
+.slider-container {
+    perspective: 1200px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.slider-item {
+    width: 300px;
+    height: 200px;
+    transition: transform 0.5s;
+    transform-origin: center;
+}
+
+.slick-slide {
+    transform-style: preserve-3d;
+}
+
+.slick-current {
+    transform: rotateY(0deg) scale(1);
+}
+
+.slick-prev {
+    transform: rotateY(45deg) scale(0.8);
+}
+
+.slick-next {
+    transform: rotateY(-45deg) scale(0.8);
+}
+
+
+
+/* Existing CSS for Slick Slider */
+
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0.7px solid #ffa600;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.slick-prev {
+    left: 10px; /* Position on the left side */
+}
+
+.slick-next {
+    right: 10px; /* Position on the right side */
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.slick-prev i, .slick-next i {
+    font-size: 20px; /* Font Awesome icon size */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 767px) {
+    .slick-prev, .slick-next {
+        padding: 5px;
+        font-size: 16px;
+    }
+}
