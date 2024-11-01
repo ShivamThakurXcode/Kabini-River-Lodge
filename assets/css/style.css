@@ -616,7 +616,7 @@ a.theme-btn span {
   transition: 0.4s;
 }
 
-.theme-btn span:before,
+/* .theme-btn span:before,
 a.theme-btn span:before {
   opacity: 0;
   -webkit-transition: 0.4s;
@@ -627,7 +627,7 @@ a.theme-btn span:before {
   -webkit-transform: translateY(150%);
   -ms-transform: translateY(150%);
   transform: translateY(150%);
-}
+} */
 
 .theme-btn i,
 a.theme-btn i {
@@ -637,23 +637,29 @@ a.theme-btn i {
   margin-left: 10px;
 }
 
-.theme-btn.style-two i,
+/* .theme-btn.style-two i,
 a.theme-btn.style-two i {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-}
+} */
 
-.theme-btn:hover span,
+/* .theme-btn:hover span,
 a.theme-btn:hover span {
   -webkit-transform: translateY(-150%);
   -ms-transform: translateY(-150%);
   transform: translateY(-150%);
-}
-
+} */
+/* 
 .theme-btn:hover span:before,
 a.theme-btn:hover span:before {
   opacity: 1;
+} */
+
+.theme-btn.bgc-secondary, a.theme-btn.bgc-secondary:hover{
+  background: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  color: white;
 }
 
 .theme-btn.bgc-secondary,
@@ -1104,19 +1110,25 @@ box-shadow:  4px 4px 9px #d9d9d9,
 
 /*** Scroll Top style ***/
 .scroll-top {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
   z-index: 99;
   color: white;
-  font-size: 24px;
+  font-size: 14px;
   cursor: pointer;
   text-align: center;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: #f7921e;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
+}
+.scroll-top:hover{
+  color: #f7921e;
 }
 
 /* Text White */
@@ -4776,12 +4788,13 @@ blockquote {
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
   font-weight: 700;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 
 @media only screen and (min-width: 376px) {
   .main-menu .navbar-collapse li a {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -4849,6 +4862,12 @@ blockquote {
     margin: 0px;
   }
 }
+
+.all-para {
+  font: 18px outfit, sans-serif;
+  color: #484848;
+}
+
 
 .main-menu .navbar-collapse li .megamenu ul {
   display: block;
@@ -5499,6 +5518,11 @@ blockquote {
   color: #ff8800; /* Change color on hover */
 }
 
+.sidebar-header{
+  border-bottom: 1px solid #525252;
+  margin-bottom: 30px;
+}
+
 /* Navigation Links */
 .sidebar-navigation {
   list-style: none;
@@ -5569,6 +5593,30 @@ blockquote {
   font-size: 16px;
   color: #666;
 }
+
+.sidebar-info {
+  margin: 30px auto;
+  border-radius: 10px;
+  background-color: rgb(208, 208, 208);
+}
+.sidebar-info a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: rgb(26, 26, 26);
+}
+
+.sidebar-info a:hover {
+  color: #F7921E;
+  letter-spacing: 0.1rem;
+}
+
+.sidebar-info a i {
+  color: #F7921E;
+}
+
 
 .sidebar-contact i {
   margin-right: 10px;
@@ -7625,7 +7673,11 @@ box-shadow:  5px 5px 7px #c7c7c7,
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  padding: 50px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px;
   margin: 0 -1px -1px 0;
   background: var(--lighter-color);
   border: 1px solid var(--border-color);
@@ -7645,9 +7697,13 @@ box-shadow:  5px 5px 7px #c7c7c7,
   }
 }
 
-.counter-item.style-two .icon {
+.counter-item.style-two .home-b {
   line-height: 1;
-  font-size: 55px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
   margin-bottom: 15px;
   color: var(--secondary-color);
 }
@@ -7664,6 +7720,7 @@ box-shadow:  5px 5px 7px #c7c7c7,
 
 .counter-item.style-two .counter-title {
   display: block;
+  text-align: center;
   font-size: 20px;
 }
 
@@ -8775,6 +8832,8 @@ box-shadow:  5px 5px 7px #c7c7c7,
   position: absolute;
 }
 
+
+
 .image-two img {
  border-radius: 10px;
 }
@@ -9828,7 +9887,8 @@ button {
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: orange;
+
 }
 
 
@@ -9864,6 +9924,9 @@ button:hover {
   position: relative;
   margin-bottom: 20px;
   border-radius: 10px;
+  -webkit-box-shadow: 17px 17px 22px -13px rgba(0,0,0,0.5);
+-moz-box-shadow: 17px 17px 22px -13px rgba(0,0,0,0.5);
+box-shadow: 17px 17px 22px -13px rgba(0,0,0,0.5);
 }
 
 .gallery-two-item .image:after {
@@ -10767,7 +10830,7 @@ blockquote .blockquote-footer:before {
   border-bottom-right-radius: 10px;
 }
 
-.accordion-item:last-of-type .accordion-button {
+.accordion-item:last-of-type .accordion-span {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -10780,12 +10843,19 @@ blockquote .blockquote-footer:before {
   border-top: 1px solid var(--border-color);
 }
 
-.accordion-item .accordion-button {
+.accordion-item .accordion-header{
+  margin: 1rem 0px;
+}
+
+.accordion-item .accordion-span {
   border: none;
   font-size: 20px;
+  
   -webkit-box-shadow: none;
   box-shadow: none;
   font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -10795,7 +10865,7 @@ blockquote .blockquote-footer:before {
 }
 
 @media only screen and (max-width: 479px) {
-  .accordion-item .accordion-button {
+  .accordion-item .accordion-span {
     font-size: 16px;
     padding: 8px 10px 8px 20px;
   }
@@ -11354,6 +11424,7 @@ blockquote .blockquote-footer:before {
 .tour-activity-item i {
   font-size: 40px;
   margin-right: 15px;
+  font-weight: 300;
   color: var(--primary-color);
 }
 
@@ -11391,6 +11462,25 @@ blockquote .blockquote-footer:before {
 /*******************************************************/
 /***************** ## Sidebar Widgets *****************/
 /*******************************************************/
+
+.itinerary  tr{
+  width: 100%;
+  border: 1px;
+  margin-bottom: 3rem ;
+  padding: 1rem;
+  
+}
+.itinerary tr .t-detail{
+  width: 70%;
+  padding-inline: 2rem;
+}
+.itinerary tr .t-time{
+  width: 35%;
+  margin-right: 3rem ;
+  text-align: justify;
+  border-right: 2px solid var(--secondary-color);
+
+}
 
 
 .widget:not(:last-child) {
@@ -12123,7 +12213,7 @@ blockquote .blockquote-footer:before {
 
 
 .footer-bottom .scroll-top {
-  top: -30px;
+  top: -22px;
   position: absolute;
   left: calc(50% - 28px);
 }

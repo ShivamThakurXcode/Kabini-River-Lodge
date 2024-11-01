@@ -71,7 +71,7 @@ navcollapse.click(function (e) {
             $(this).children('.megamenu').stop(true, false, true).slideToggle(300);
             
             // Toggle the arrow icon
-            var icon = $(this).find('.dropdown-btn span');
+            var icon = $(this).find('.dropdown-btn div');
             if (icon.hasClass('fa-angle-down')) {
                 icon.removeClass('fa-angle-down').addClass('fa-angle-up');
             } else {
@@ -343,7 +343,7 @@ if ($('.main-header .navigation li.dropdown ul').length) {
                 ]
             });
         }
-        
+       
 
         // ## Gallery Slider
         if ($('.gallery-slider-active').length) {
@@ -418,16 +418,16 @@ if ($('.main-header .navigation li.dropdown ul').length) {
             });
         }
         
-        
-        // ## Gallery Popup
-        $('.gallery a').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-            },
-        });
-        
+$(document).ready(function() {
+    $('.gallery-two-item .link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true
+        }
+    });
+});
+
         
         // ## Instagram Gallery 
         $('.instagram-item').magnificPopup({
