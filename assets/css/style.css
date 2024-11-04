@@ -7361,7 +7361,7 @@ box-shadow:  5px 5px 7px #c7c7c7,
 }
 
 /* Destination Details */
-.gallery-more-btn {
+.gallery-more-btn 
   position: absolute;
   right: 27%;
   bottom: 60px;
@@ -7382,13 +7382,24 @@ box-shadow:  5px 5px 7px #c7c7c7,
 @media only screen and (max-width: 575px) {
   .destination-details-content .section-title .h2 {
     font-size: 25px;
+    
   }
+  #acc-price1 , #acc-price2 {
+    font-size: 25px;
+    text-wrap: nowrap;
+   }
+  #acc-price2 span {
+    font-size: smaller;
+  }
+ 
 }
 
 @media only screen and (max-width: 375px) {
   .destination-details-content .section-title .h2 {
     font-size: 20px;
   }
+ 
+ 
 }
 
 @media only screen and (min-width: 1200px) {
@@ -7438,11 +7449,20 @@ box-shadow:  5px 5px 7px #c7c7c7,
 }
 
 /* Tour Details */
+
+
 @media only screen and (min-width: 576px) {
   .tour-header-content .ratting i {
     font-size: 18px;
   }
+
+  
+  
+ 
 }
+
+
+
 
 .tour-header-social a {
   margin-bottom: 10px;
@@ -7514,7 +7534,7 @@ box-shadow:  5px 5px 7px #c7c7c7,
 
 .tour-include-exclude {
   border-radius: 10px;
-  padding: 35px 50px 28px;
+  padding: 35px 30px 28px;
   border: 1px solid var(--border-color);
 }
 
@@ -7549,6 +7569,9 @@ box-shadow:  5px 5px 7px #c7c7c7,
 .clients-reviews {
   padding: 50px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -7556,6 +7579,7 @@ box-shadow:  5px 5px 7px #c7c7c7,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: row;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -7564,9 +7588,12 @@ box-shadow:  5px 5px 7px #c7c7c7,
 
 @media only screen and (max-width: 479px) {
   .clients-reviews {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+
+
+
 }
 
 @media only screen and (max-width: 375px) {
@@ -7635,6 +7662,45 @@ box-shadow:  5px 5px 7px #c7c7c7,
 .clients-reviews .right {
   width: 100%;
 }
+
+@media only screen and (max-width: 479px) {
+  .clients-reviews .left span {
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2;
+  }
+  .clients-reviews .left span i {
+     margin-right: 15px;
+  }
+  .clients-reviews {
+    padding: 20px 10px;
+  }
+
+  .clients-reviews .left {
+    padding: 10px 10px 10px ;
+    margin-inline: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    width: min-content;
+  }
+  .clients-reviews .left b {
+    font-size: 1.7rem;
+    text-wrap: nowrap;
+    
+  }
+  .clients-reviews .left .ratting {
+    font-size: 1em;
+    text-wrap: nowrap;
+    scale: 0.7;
+  
+  }
+
+}
+
+
 
 .ratting-item {
   display: -webkit-box;
@@ -11463,10 +11529,24 @@ th, td {
   font-size: 14px;
 }
 
+tr td:first-child {
+  width: 30%;
+  word-break: break-all;
+
+}
+tr td:nth-child(2) {
+  text-align: start;
+
+}
+
+
+
+
 th {
   font-size: 16px;
   font-weight: 600;
   color: #374151;
+  
 }
 
 thead tr:first-child th {
@@ -11515,12 +11595,35 @@ tbody td {
     padding: 8px 15px;
     margin: 0 5px 5px 0;
   }
+
+  
+ tr td:first-child {
+  width: 50%;
+  word-break: break-all;
+  padding: 1.9rem;
+
+}
+
+
 }
 
 @media only screen and (max-width: 375px) {
   .tour-activity-item {
     padding: 5px 12px;
   }
+}
+
+
+.form-group .contact-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form-group .form-check-input {
+  text-align: center;
+}
+.contact-button {
+  margin-inline: auto;
 }
 
 .tour-activity-item i {
