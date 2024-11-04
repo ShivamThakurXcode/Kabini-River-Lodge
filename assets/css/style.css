@@ -8042,6 +8042,7 @@ box-shadow:  5px 5px 7px #c7c7c7,
 
 .about-us-page  img{
   border-radius: 10px;
+  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.3);;
 }
 
 .about-page-content .list-style-two li {
@@ -8178,7 +8179,9 @@ box-shadow:  5px 5px 7px #c7c7c7,
 .feature-item.style-two .icon {
   margin-bottom: 18px;
   color: var(--secondary-color);
+  
 }
+
 
 .feature-item.style-two .icon:before {
   display: none;
@@ -8188,6 +8191,7 @@ box-shadow:  5px 5px 7px #c7c7c7,
   margin-bottom: 0;
   letter-spacing: -1px;
 }
+
 
 .feature-item.style-two .content p {
   -webkit-transition: 0.5s;
@@ -8204,7 +8208,7 @@ box-shadow:  5px 5px 7px #c7c7c7,
 
 .feature-item.style-two:hover .icon,
 .feature-item.style-two:hover .content p,
-.feature-item.style-two:hover .content h5 a {
+.feature-item.style-two:hover .content h5 {
   color: white;
 }
 
@@ -8871,21 +8875,11 @@ box-shadow:  5px 5px 7px #c7c7c7,
 /*******************************************************/
 /******************** ## Team Area ********************/
 /*******************************************************/
-.team-area:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: -webkit-linear-gradient(88.59deg, rgba(29, 35, 31, 0.3) 1.2%, #1D231F 98.81%);
-  background: -o-linear-gradient(88.59deg, rgba(29, 35, 31, 0.3) 1.2%, #1D231F 98.81%);
-  background: linear-gradient(1.41deg, rgba(29, 35, 31, 0.3) 1.2%, #1D231F 98.81%);
-}
+
 
 .team-item {
   margin-bottom: 30px;
+  
 }
 
 .team-item img {
@@ -8894,19 +8888,15 @@ box-shadow:  5px 5px 7px #c7c7c7,
 }
 
 .team-item .content {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  color: rgb(216, 216, 216);
-  right: 10px;
-  background: #ffffff4f;
+  position: relative;
+  backdrop-filter: blur(6px) !important;
+  bottom: 88px;
+  background: rgba(255, 255, 255, 0.145);
   text-align: center;
+  color: white;
   border-radius: 10px;
-  border: 0.4px solid #e7e7e7;
   padding: 15px 10px;
-  backdrop-filter: blur(5px);
 }
-
 
 .team-item .content h6 {
   margin-bottom: 0;
@@ -8917,23 +8907,19 @@ box-shadow:  5px 5px 7px #c7c7c7,
   display: block;
 }
 
-.team-item .content .abt-style-one {
+.team-item .content .social-style-one {
   display: none;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.team-item .content .abt-style-one a {
+.team-item .content .social-style-one a {
   width: 40px;
   height: 40px;
   line-height: 40px;
   display: inline-block;
 }
 
-.team-item .content .abt-style-one a:not(:hover) {
-  color: var(--primary-color);
-  background: rgba(var(--primary-rgb), 0.15);
-}
 
 .image-one img {
  border-radius: 10px;
